@@ -320,3 +320,20 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
+@media (max-width: 768px) {
+    .description {
+        display: block !important; /* Ensures it's visible */
+        width: 95%; /* Adjust width for smaller screens */
+        padding: 15px;
+        text-align: center;
+    }
+
+    .description h2 {
+        font-size: 1.5rem !important; /* Adjust heading size */
+    }
+
+    .description p {
+        font-size: 1rem !important; /* Make paragraph text readable */
+        color: white !important; /* Ensure text is visible */
+    }
+}
