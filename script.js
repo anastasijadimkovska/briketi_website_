@@ -28,15 +28,17 @@ fetch(apiURL)
 
 // 2️⃣ Fade-in Effect (No Issues, Just Placed Below Weather Fetch)
 const fadeElements = document.querySelectorAll(".fade-in");
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add("visible");
         }
     });
-}, { threshold: 0.5 });
+}, { threshold: 0.2 });
 
 fadeElements.forEach(element => observer.observe(element));
+
 
 // 3️⃣ Price Calculator (Move Inside an Event Listener for Performance)
 document.addEventListener("DOMContentLoaded", () => {
