@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТОНИ-БРИКЕТ</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" alt="ТОНИ-БРИКЕТ Logo" class="logo">
+        </header>
+        <section class="gallery">
+           
+            <img src="images/slika_1.jpg" class="gallery-item" onclick="openLightbox(this.src)">
+            <img src="images/slika_2.jpg" class="gallery-item" onclick="openLightbox(this.src)">
+            <img src="images/slika_3.jpg" class="gallery-item" onclick="openLightbox(this.src)">
+            <img src="images/slika_4.jpg" class="gallery-item" onclick="openLightbox(this.src)">
+
+        </section>
+        <section class="contact">
+            <p class="contact-item">
+                <i class="fas fa-phone"></i> 
+                Контакт број: <a href="tel:+38970511764" class="contact-link">+389 70 511 764</a>
+            </p>
+            
+            <p class="contact-item">
+                <i class="fas fa-circle"></i> 
+                Дијаметар: <span class="highlight">F90</span>
+            </p>
+        
+            <p class="contact-item">
+                <i class="fas fa-tag"></i> 
+                Цена: <span class="price">15 ден/кг</span>
+            </p>
+        
+            <p class="contact-item">
+                <i class="fab fa-facebook"></i> 
+                <a href="https://www.facebook.com/profile.php?id=61556256215381" target="_blank" class="facebook-link">Facebook</a>
+            </p>
+            
+            <p class="contact-item">
+                <i class="fas fa-tag"></i> Локација: Бутел</p>
+        </section>
+      
+        <section class="description">
+            <h2>Зошто да користите брикети?</h2>
+            <p>
+                Брикетите се <strong>еколошки, економични и ефикасни</strong>! Тие се рециклиран производ направен од струготини од масивно, 
+                листопадно дрво кое претходно се обработувало во фабриките за дрвни производи. Брикетите не содржат никакви хемиски додатоци, 
+                лепаци, бои и слично, што ги прави <strong>еколошки и чист производ</strong> за затоплување на вашиот дом.
+            </p>
+        
+            <p><strong>✓ Подобри од дрвото</strong> – Кога употребувате 1 тон брикети, значи дека заштедувате околу <strong>3 кубни метри дрво</strong>, коешто треба да се исече во шумата. 
+                Тоа значи <strong>опстанок на поголема површина на шумите</strong>, поголем извор на кислород, акумулација на вода во природата, помала ерозија на земјиштето и почист воздух! 
+            </p>
+        
+            <p><strong>🕯 Поголема енергетска вредност</strong> – Брикетите имаат <strong>минимална влажност</strong>, голем процент на согорување и минимален остаток од пепел што значи поголема ефикасност и топлина.</p>
+        
+            <p><strong>• Економични</strong> – Поради <strong>повисоката калорична вредност</strong>, потребно е <strong>помалку материјал</strong> за истата топлина.</p>
+        
+            <p><strong>• Еколошки</strong> – Со самото рециклирање на отпадот од обработеното дрво се <strong>заштитува околината</strong> од загадување.</p>
+        
+            <h3>Идеални се за:</h3>
+            <ul class="usage">
+                <li>Шпорети</li>
+                <li>Камини</li>
+                <li>Печки</li>
+                <li>Индустриски котли</li>
+                <li>Централно греење</li>
+                <li>И во сите останати грејни тела каде што се користи и дрвото како огревен материјал.</li>
+            </ul>
+        
+            <p class="cta">• Придружете се кон еколошкото греење – <strong>изберете брикети и зачувајте ја природата!</strong></p>
+        </section>
+        <section class="video-section">
+            <h2>Процес на производство на брикети</h2>
+            <video controls>
+                <source src="images/production.mp4" type="video/mp4">
+            </video>
+        </section>
+        
+        
+    </div>
+    <script>
+        function openLightbox(src) {
+            let lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
+            lightbox.innerHTML = `<img src="${src}" class="lightbox-img">`;
+            document.body.appendChild(lightbox);
+            
+            lightbox.addEventListener('click', function(event) {
+                if (event.target !== lightbox.firstChild) {
+                    lightbox.remove();
+                }
+            });
+            
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    lightbox.remove();
+                }
+            }, { once: true });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+    body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('images/fire.gif') center center/cover;
+    animation: flicker 2s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.8; transform: scale(1.02); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.container {
+    max-width: 900px; /* Adjusted for better centering */
+    width: 90%;
+    margin: auto;
+    background-color: rgb(10, 148, 10);
+    border-radius: 2%;
+    text-align: center; /* Ensures text content stays centered */
+    padding: 20px; /* Adds spacing */
+}
+
+.logo {
+    width: 20em; /* Increase size */
+    display: block;
+    margin: 0 auto 20px; /* Center the logo */
+}
+    .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust the minimum size */
+    gap: 10px;
+    justify-content: center;
+    max-width: 900px; /* Ensures it doesn't stretch too much */
+    margin: 0 auto; /* Centers the gallery */
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 50em; /* Limit image width */
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+/* Contact Section Styling */
+.contact {
+    text-align: center;
+    margin: 20px auto; /* Centers the section */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.7);
+    width: 90%;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect: Slight Elevation */
+.contact:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 100, 0, 1);
+}
+
+.contact-item {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Icons Styling */
+.contact-item i {
+    color: #ff8c00;
+    font-size: 1.6rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on Icons */
+.contact-item:hover i {
+    transform: scale(1.3);
+    color: #ff4500;
+}
+
+/* Contact Link */
+.contact-link, .facebook-link {
+    text-decoration: none;
+    color: #ffcc00;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Links */
+.contact-link:hover, .facebook-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Price Styling */
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff4500;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Price */
+.price:hover {
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 100, 0, 0.8);
+}
+
+
+    .lightbox {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .lightbox-img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+   /* Description Section Styling */
+.description {
+    max-width: 800px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px auto;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.6);
+    font-family: 'Montserrat', sans-serif; /* Modern font */
+}
+
+/* Section Heading */
+.description h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Paragraph Styling */
+.description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+/* List Styling */
+.usage {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+}
+
+.usage li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 25px;
+    text-align: left;
+}
+
+/* Custom bullet points */
+.usage li::before {
+    content: "✔";
+    color: #ffcc00;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Call-to-Action Styling */
+.cta {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff4500;
+    margin-top: 20px;
+}
+/* Video Section Styling */
+.video-section {
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.6);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Section Heading */
+.video-section h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+/* Video Styling */
+.video-section video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
+}
+
+
+
+</style>
