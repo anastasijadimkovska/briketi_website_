@@ -13,13 +13,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></head>
-<body>
+    <script src="script.js" defer></script>
+    <a href="viber://chat?number=+38970511764" class="viber-button">
+        📞 Контакт Viber
+    </a>
+    
+    <body>
+        <div class="weather-sidebar">
+            <h3>🌤 Времето</h3>
+            <p id="weather-info">Се вчитува...</p>
+            <p id="weather-cta">⌛ Чекаме временска прогноза...</p> <!-- This will show the CTA message -->
+        </div>
+        
+        
     <div class="background"></div>
     <div class="container">
         <header>
             <img src="images/logo.png" alt="ТОНИ-БРИКЕТ Logo" class="logo">
+            
         </header>
-        <section class="gallery">
+        <section class="gallery fade-in">
            
             <img src="images/slika_1.jpg" class="gallery-item" onclick="openLightbox(this.src)">
             <img src="images/slika_2.jpg" class="gallery-item" onclick="openLightbox(this.src)">
@@ -27,7 +40,7 @@
             <img src="images/slika_4.jpg" class="gallery-item" onclick="openLightbox(this.src)">
 
         </section>
-        <section class="contact">
+        <section class="contact fade-in">
             <p class="contact-item">
                 <i class="fas fa-phone"></i> 
                 Контакт број: <a href="tel:+38970511764" class="contact-link">+389 70 511 764</a>
@@ -50,9 +63,10 @@
             
             <p class="contact-item">
                 <i class="fas fa-tag"></i> Локација: Бутел</p>
+
         </section>
       
-        <section class="description">
+        <section class="description fade-in">
             <h2>Зошто да користите брикети?</h2>
             <p>
                 Брикетите се <strong>еколошки, економични и ефикасни</strong>! Тие се рециклиран производ направен од струготини од масивно, 
@@ -82,16 +96,21 @@
         
             <p class="cta">• Придружете се кон еколошкото греење – <strong>изберете брикети и зачувајте ја природата!</strong></p>
         </section>
-        <section class="video-section">
+        <section class="price-calculator fade-in">
+            <h2>Калкулатор за цена</h2>
+            <label for="quantity">Избери количина (кг):</label>
+            <input type="number" id="quantity" min="1" value="10">
+            <p>Цена: <span id="total-price">150</span> денари</p>
+        </section>
+        
+        <section class="video-section fade-in">
             <h2>Процес на производство на брикети</h2>
             <video controls>
                 <source src="images/production.mp4" type="video/mp4">
             </video>
         </section>
-        
-        
+    
     </div>
-<script src="script.js"></script>
 
 </body>
 </html>

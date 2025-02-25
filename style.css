@@ -22,7 +22,7 @@ body {
     max-width: 900px; /* Adjusted for better centering */
     width: 90%;
     margin: auto;
-    background-color: rgb(10, 148, 10);
+    background-color: rgb(39, 129, 39);
     border-radius: 2%;
     text-align: center; /* Ensures text content stays centered */
     padding: 20px; /* Adds spacing */
@@ -235,5 +235,88 @@ body {
     max-width: 800px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.price-calculator {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.viber-button {
+    position: fixed;
+    bottom: 20px; /* Lower the button so it doesn’t overlap */
+    right: 20px; /* Keep it aligned with the WhatsApp button */
+    background: #097225;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    z-index: 9999; /* Ensures it's above other elements */
+}
+
+/* Pushes it further down on mobile screens */
+@media (max-width: 768px) {
+    .viber-button {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+.weather-sidebar {
+    position: fixed !important; /* Forces it to stay in place */
+    top: 50vh; /* Centers it vertically */
+    right: 20px; /* Sticks to the right */
+    width: 220px;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    z-index: 9999; /* Ensures it's above everything */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Ensures header and sections don’t interfere */
+body {
+    position: relative;
+}
+
+/* Hide on small screens */
+@media (max-width: 768px) {
+    .weather-sidebar {
+        display: none;
+    }
+}
+#weather-cta {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffcc00; /* Bright yellow for attention */
+    text-align: center;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
